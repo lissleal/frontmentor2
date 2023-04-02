@@ -1,0 +1,190 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  text-align: center; }
+
+h1, h2 {
+  font-size: 16px; }
+
+main {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  main .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 20px;
+    box-shadow: 8px 8px 8px #2e2be921;
+    max-width: 475px; }
+    main .grid .textotransparente {
+      color: rgba(255, 255, 255, 0.571); }
+    main .grid .izquierda {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      justify-content: space-around;
+      gap: 15px;
+      border-radius: 20px;
+      background: #2e2be9;
+      background: linear-gradient(0deg, #2e2be9 0%, #7857ff 100%);
+      color: white;
+      padding: 35px; }
+      main .grid .izquierda .palabragrande {
+        font-size: 20px; }
+      main .grid .izquierda .circle {
+        background: #7857ff;
+        background: linear-gradient(0deg, rgba(120, 87, 255, 0.1) 0%, #2e2be9 100%);
+        border-radius: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 125px;
+        width: 125px; }
+        main .grid .izquierda .circle .textogrande {
+          font-size: 45px;
+          font-weight: 600; }
+    main .grid .derecha {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 25px;
+      align-items: stretch;
+      gap: 15px;
+      color: #2b2a5f; }
+      main .grid .derecha h2 {
+        text-align: start; }
+      main .grid .derecha .resumen .resumenred {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #ff575715;
+        border-radius: 5px;
+        margin: 10px 0;
+        padding: 8px; }
+        main .grid .derecha .resumen .resumenred .textoizquierdo {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          justify-content: start;
+          gap: 5px; }
+          main .grid .derecha .resumen .resumenred .textoizquierdo svg {
+            height: 13px;
+            width: 13px; }
+          main .grid .derecha .resumen .resumenred .textoizquierdo .texto {
+            color: #ff5757; }
+        main .grid .derecha .resumen .resumenred .textotransparente {
+          color: #2b2a5f83; }
+      main .grid .derecha .resumen .resumenyellow {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #ffb01f15;
+        border-radius: 5px;
+        margin: 10px 0;
+        padding: 8px; }
+        main .grid .derecha .resumen .resumenyellow .textoizquierdo {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          justify-content: start;
+          gap: 5px; }
+          main .grid .derecha .resumen .resumenyellow .textoizquierdo svg {
+            height: 13px;
+            width: 13px; }
+          main .grid .derecha .resumen .resumenyellow .textoizquierdo .texto {
+            color: #ffb01f; }
+        main .grid .derecha .resumen .resumenyellow .textotransparente {
+          color: #2b2a5f83; }
+      main .grid .derecha .resumen .resumengreen {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #00bd9115;
+        border-radius: 5px;
+        margin: 10px 0;
+        padding: 8px; }
+        main .grid .derecha .resumen .resumengreen .textoizquierdo {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          justify-content: start;
+          gap: 5px; }
+          main .grid .derecha .resumen .resumengreen .textoizquierdo svg {
+            height: 13px;
+            width: 13px; }
+          main .grid .derecha .resumen .resumengreen .textoizquierdo .texto {
+            color: #00bd91; }
+        main .grid .derecha .resumen .resumengreen .textotransparente {
+          color: #2b2a5f83; }
+      main .grid .derecha .resumen .resumenblue {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #1125d415;
+        border-radius: 5px;
+        margin: 10px 0;
+        padding: 8px; }
+        main .grid .derecha .resumen .resumenblue .textoizquierdo {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          justify-content: start;
+          gap: 5px; }
+          main .grid .derecha .resumen .resumenblue .textoizquierdo svg {
+            height: 13px;
+            width: 13px; }
+          main .grid .derecha .resumen .resumenblue .textoizquierdo .texto {
+            color: #1125d4; }
+        main .grid .derecha .resumen .resumenblue .textotransparente {
+          color: #2b2a5f83; }
+      main .grid .derecha .boton {
+        background-color: #2b2a5f;
+        color: white;
+        border-radius: 20px;
+        padding: 8px; }
+        main .grid .derecha .boton:hover {
+          border: solid #2e2be9 2px;
+          background: #2e2be9;
+          background: linear-gradient(0deg, #2e2be9 0%, #7857ff 100%); }
+  main footer {
+    margin: 10px; }
+
+@media screen and (max-width: 425px) {
+  main {
+    height: auto; }
+    main .grid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-items: stretch;
+      box-shadow: none; }
+      main .grid .izquierda {
+        border-radius: 0px 0px 20px 20px; }
+        main .grid .izquierda .circle {
+          height: 100px;
+          width: 100px; }
+          main .grid .izquierda .circle .textogrande {
+            font-size: 40px; } }

@@ -1,0 +1,171 @@
+// FONTS
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+// RESET
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hanken Grotesk', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    text-align: center;
+}
+
+h1, h2 {
+    font-size: 16px;
+}
+
+
+// VARIABLES
+
+$colores: (
+red: hsl(0, 100%, 67%),
+yellow: hsl(39, 100%, 56%),
+green: hsl(166, 100%, 37%),
+blue: hsl(234, 85%, 45%),
+);
+// background
+$blue2: #7857ff;
+$royalblue: #2e2be9;
+
+// circle
+$violetblue: hsla(256, 72%, 46%, 1);
+$persianblue: hsla(241, 72%, 46%, 0);
+
+//Funciones usadas
+
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 90vh;
+    @include flex-col();
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        border-radius: 20px;
+        box-shadow: 8px 8px 8px #2e2be921;
+        max-width: 475px;
+        .textotransparente {
+            color: rgba(255, 255, 255, 0.571);
+        }
+        .izquierda {
+            
+            @include flex-col();
+            justify-content: space-around;
+            gap: 15px;
+            border-radius: 20px;
+            background: rgb(46,43,233);
+            background: linear-gradient(0deg, rgba(46,43,233,1) 0%, rgba(120,87,255,1) 100%);    
+            color: white;
+            padding: 35px;
+
+            .palabragrande {
+                font-size: 20px;
+            }
+            .circle {
+                background: rgb(120,87,255);
+                background: linear-gradient(0deg, rgba(120,87,255,0.1) 0%, rgb(46,43,233) 100%);
+                border-radius: 100%;
+                @include flex-col();
+                height: 125px;
+                width: 125px;
+                .textogrande {
+                    font-size: 45px;
+                    font-weight: 600;
+                }
+                
+            }
+        }
+
+        .derecha {
+            @include flex-col();
+            padding: 25px;
+            align-items: stretch;
+            gap: 15px;
+            color: #2b2a5f;
+            h2 {
+                text-align: start
+            }
+
+            .resumen {                      
+            @each $tarjeta, $colortarjeta in $colores{
+                    .resumen#{$tarjeta} {
+                        @include flex-row();
+                        justify-content: space-between;
+                        background-color: #{$colortarjeta}15;
+                        border-radius: 5px;
+                        margin: 10px 0;
+                        padding: 8px;
+                        .textoizquierdo{   
+                            @include flex-row();
+                            justify-content: start;
+                            gap: 5px;
+                            svg {
+                                height: 13px;
+                                width: 13px;
+                            }
+                            .texto {
+                                color: $colortarjeta;
+                            }
+                        }
+                        .textotransparente {
+                            color:  #2b2a5f83;
+                        }                     
+                    }
+                }
+            }
+            .boton {
+                background-color: #2b2a5f;
+                color: white;
+                border-radius: 20px;
+                padding: 8px;
+
+                &:hover {
+                    border: solid rgb(46,43,233) 2px;
+                    background: rgb(46,43,233);
+                    background: linear-gradient(0deg, rgba(46,43,233,1) 0%, rgba(120,87,255,1) 100%); 
+                }
+            }
+        }
+    }
+    footer {
+        margin: 10px;
+    }
+}
+
+// MEDIAQUERIES
+
+@media screen and (max-width: 425px) {
+    main {
+        height: auto;
+        .grid {
+            @include flex-col();
+            align-items: stretch;
+            box-shadow: none;
+
+            .izquierda {
+                border-radius: 0px 0px 20px 20px;
+                .circle {
+                    height: 100px;
+                    width: 100px;
+                    .textogrande {
+                        font-size: 40px;
+                    }
+                }
+            }
+        }
+    }
+}
